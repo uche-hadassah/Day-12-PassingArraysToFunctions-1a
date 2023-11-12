@@ -29,7 +29,7 @@ int main()
 void CopyArray(int source[], int destination[])
 {
 	int j = 0;
-	while (source[j] != -1&& j<MAX)
+	while (source[j] != -1 && j < MAX)
 	{
 		destination[j] = source[j];
 		j++;
@@ -43,6 +43,6 @@ void CopyArray(int source[], int destination[])
 	cout << "\nDestination Array:";
 	for (int k = 0; k <= j; k++)
 	{
-		cout << destination[k];
+		cout << destination[k]<<" ";
 	}
 }
