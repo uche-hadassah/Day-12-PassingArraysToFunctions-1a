@@ -1,8 +1,7 @@
-/*a) Write a void function called CopyArray that takes two arrays of integers as 
-parameters, called source and destination, and copies the elements from the array 
-source into the array destination. You should assume that there is a -1 at the end of 
-the array source. Write a main program to test your function with a user defined array 
-(-1 to signal end of input). The program should output both arrays.*/
+/*Name:Uche Hadassah
+This program receives numbers from the user until a sentinel is entered,
+stores it in an array,copies it into another array, and outputs the two arrays
+*/
 #include<iostream>
 using namespace std;
 const int MAX = 100;
@@ -16,13 +15,13 @@ int main()
 		do
 		{
 			cin >> arr1[i];
-			if (arr1[i] == -1)
+			if (arr1[i] == -1)//Iff this happens, the loop ends
 			{
 				break;
 			}
 			i++;
-		} while (arr1[i] != -1 && i < MAX);
-		CopyArray(arr1, arr2);
+		} while (arr1[i] != -1 && i < MAX);//While the sentinel is not reached
+		CopyArray(arr1, arr2);//Function call
 	return 0;
 }
 
@@ -31,17 +30,17 @@ void CopyArray(int source[], int destination[])
 	int j = 0;
 	while (source[j] != -1 && j < MAX)
 	{
-		destination[j] = source[j];
+		destination[j] = source[j];//Equates the two arrays
 		j++;
 	}
-	destination[j] = -1;
+	destination[j] = -1;//sets the last value in the dest. array to the sentinel since we want to output that too
 	cout << "\nSource Array:";
-	for (int i = 0; i <= j; i++)
+	for (int i = 0; i <= j; i++)//Outputs the source array
 	{
 		cout << source[i] << " ";
 	}
 	cout << "\nDestination Array:";
-	for (int k = 0; k <= j; k++)
+	for (int k = 0; k <= j; k++)//Outputs the dest. array
 	{
 		cout << destination[k]<<" ";
 	}
